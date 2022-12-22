@@ -1,0 +1,18 @@
+body{
+    width:100vw;
+    height:100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+
+    display:flex;
+    width:160px;
+    flex-wrap: wrap;
+}
+.block{
+    width:10px;
+    height:10px;
+    background-color: black;
+}
