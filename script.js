@@ -4,3 +4,12 @@ for(let i=0;i<(16*16);i++){
     div.setAttribute('class','block');
     container.appendChild(div);
 }
+
+// div.classList.toggle(‘active’);
+const blocks = document.querySelectorAll(".block");
+blocks.forEach((block) => {
+    block.addEventListener('mouseover',()=> {
+        block.classList.add('active');
+    });
+    console.log("hi");
+});

@@ -14,5 +14,11 @@ body{
 .block{
     width:10px;
     height:10px;
-    background-color: black;
+
+}
+
+.active{
+    width:10px;
+    height:10px;
+    background-color:black;
 }
