@@ -1,5 +1,7 @@
 let rgbStatus = 0;
+
 const container = document.querySelector(".container");
+
 function gridbuilder(size){
     clearGrid();
     let blockSize = 700/size;
@@ -17,18 +19,30 @@ function gridbuilder(size){
         block.style.width = blockSize+"px";
         block.style.height = blockSize+"px";
     });
-    gridEvent();
+    gridEvent(blockSize);
 
 }
 
 // div.classList.toggle(‘active’);
-function gridEvent(){
+function gridEvent(blockSize){
     const blocks = document.querySelectorAll(".block");
     blocks.forEach((block) => {
         block.addEventListener('mouseover',()=> {
-            block.classList.add('active');
+            let color = randomColor();
+            console.log(color);
+            console.log(rgbStatus);
+            if (rgbStatus == 0){
+                block.classList.add('active');
+                block.style.background = 'black';
+            }
+            if (rgbStatus == 1){
+                console.log(blockSize);
+                block.classList.remove('active');
+                block.style.width = blockSize+"px";
+                block.style.height = blockSize+"px";
+                block.style.background = color;
+            }
         });
-        console.log("hi");
     });
 
 }
@@ -65,6 +79,6 @@ function randomColor() {
     var green = Math.floor(Math.random() * 256);
     var blue = Math.floor(Math.random() * 256);
     var color = "rgb(" + red + "," + green + "," + blue + ")";  
-    document.body.style.background = color;
+    return color;
     }
 
