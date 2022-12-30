@@ -1,3 +1,4 @@
+let rgbStatus = 0;
 const container = document.querySelector(".container");
 function gridbuilder(size){
     clearGrid();
@@ -33,14 +34,18 @@ function gridEvent(){
 }
 
 function clearGrid(){
-    const blocks = document.querySelectorAll(".active");
-    blocks.forEach((block)=>{
-        block.classList.remove('active');
-    });
+    const blocks = document.querySelector(".container");
+    blocks.innerHTML = "";
 }
+
 const btn = document.querySelector("#btn");
 btn.addEventListener('click',()=>{
     let side = prompt("How many blocks will each side of the grid have");
     console.log(side);
     gridbuilder(side);
 });
+
+const rgbBtn = document.querySelector("#rainbow");
+btn.addEventListener('click'),()=>{
+
+}
