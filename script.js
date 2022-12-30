@@ -46,6 +46,14 @@ btn.addEventListener('click',()=>{
 });
 
 const rgbBtn = document.querySelector("#rainbow");
-btn.addEventListener('click'),()=>{
-
-}
+rgbBtn.addEventListener('click',()=>{
+    if (rgbStatus == 0){
+        rgbStatus = 1;
+        rgbBtn.textContent = "Black";  
+    }
+    else{
+        rgbStatus = 0;
+        rgbBtn.textContent = "Rainbow";
+    }
+    
+});
