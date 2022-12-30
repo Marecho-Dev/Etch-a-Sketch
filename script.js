@@ -57,3 +57,14 @@ rgbBtn.addEventListener('click',()=>{
     }
     
 });
+
+function randomColor() {
+    //Math.floor rounds down
+    //Math.random() * 256 will be any number from 0*1 times 256
+    var red = Math.floor(Math.random() * 256);
+    var green = Math.floor(Math.random() * 256);
+    var blue = Math.floor(Math.random() * 256);
+    var color = "rgb(" + red + "," + green + "," + blue + ")";  
+    document.body.style.background = color;
+    }
+
